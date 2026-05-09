@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCARECROW MANIAC</title>
+    <link href="https://googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="https://cloudflare.com">
+    
+    <style>
+        :root { --bg: #000; --txt: #fff; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: var(--bg); color: var(--txt); font-family: 'Roboto Mono', monospace; overflow-x: hidden; }
+        
+        /* Текстура зерна */
+        body::after {
+            content: ""; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: url('https://wikimedia.org');
+            opacity: 0.04; pointer-events: none; z-index: 1000;
+        }
+
+        header {
+            height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center;
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), 
+                        url('Bannerof.png');
+            background-size: cover; background-position: center; border-bottom: 3px solid var(--txt);
+        }
+
+        h1 { font-family: 'Oswald', sans-serif; font-size: clamp(3rem, 10vw, 6rem); text-transform: uppercase; animation: glitch 0.4s infinite alternate; }
+        .subtext { background: var(--txt); color: var(--bg); padding: 5px 15px; font-weight: bold; margin-top: 10px; }
+
+        section { padding: 80px 20px; max-width: 1100px; margin: 0 auto; }
+        .section-title { font-family: 'Oswald', sans-serif; font-size: 2.5rem; text-transform: uppercase; border-left: 8px solid var(--txt); padding-left: 20px; margin-bottom: 40px; }
+
+        .platform-logos { font-size: 2.5rem; display: flex; gap: 30px; margin-top: 30px; }
+        .platform-logos a { color: var(--txt); opacity: 0.6; transition: 0.3s; }
+        .platform-logos a:hover { opacity: 1; transform: translateY(-5px); }
+
+        .discog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+        .album-card { background: #080808; border: 1px solid #222; padding: 20px; transition: 0.3s; text-align: center; }
+        .album-card:hover { border-color: var(--txt); }
+
+        iframe { filter: grayscale(1) invert(1) contrast(1.2); transition: 0.5s; margin: 15px 0; border: none; }
+        .album-card:hover iframe { filter: grayscale(0) invert(0) contrast(1); }
+
+        .btn { display: inline-block; padding: 12px 25px; background: var(--txt); color: var(--bg); text-decoration: none; font-weight: 900; text-transform: uppercase; border: 2px solid var(--txt); transition: 0.3s; margin: 5px; cursor: pointer; }
+        .btn:hover { background: transparent; color: var(--txt); }
+        .btn-sm { font-size: 0.8rem; padding: 8px 15px; }
+
+        footer { background: #000; text-align: center; padding: 80px 20px; border-top: 3px solid var(--txt); }
+
+        @keyframes glitch { 
+            0% { transform: skew(0deg); } 
+            100% { transform: skew(1.5deg); text-shadow: 2px 0 #ff0000, -2px 0 #0000ff; } 
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>SCARECROW MANIAC</h1>
+        <p class="subtext">Music Producer | Since 2022 | 80,000+ plays</p>
+    </header>
+
+    <section id="about">
+        <h2 class="section-title">About & Stats</h2>
+        <p>Producing Trap, Hip-Hop, and Electronic music. Collaborated with various producers.</p>
+        <div class="platform-logos">
+            <a href="https://open.spotify.com/artist/5BozV77zPaWamvWhMc6R0Z" target="_blank"><i class="fa-brands fa-spotify"></i></a>
+            <a href="https://music.apple.com/us/artist/scarecrow-maniac/1698717735" target="_blank"><i class="fa-brands fa-apple"></i></a>
+            <a href="https://youtube.com" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+    </section>
+
+    <section id="discography">
+        <h2 class="section-title">Discography</h2>
+        <div class="discog-grid">
+            <!-- STILL SCARECROW 4 -->
+            <div class="album-card">
+                <h3>STILL SCARECROW 4</h3>
+                <iframe width="100%" height="300" src="https://soundcloud.com/scarecrow_maniac/still-scarecrow-4?si=6955bdbe0f414d2192ac24cb150f317e&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"></iframe>
+                <a href="https://open.spotify.com/album/1t6afK9UCWFoCyC9FbYEGr?si=hIXCnpAGTQ2PdkXsDiivVA" target="_blank" class="btn btn-sm">Spotify</a>
+                <a href="https://music.apple.com/at/album/still-scarecrow-4/1823703410" target="_blank" class="btn btn-sm">Apple</a>
+            </div>
+
+            <!-- MIDNIGHT MYSTERIES -->
+            <div class="album-card">
+                <h3>MIDNIGHT MYSTERIES</h3>
+                <iframe width="100%" height="300" src="https://soundcloud.com/scarecrow_maniac/midnight-mysteries?si=7d6c5ad38b804d17ae36387064d49802&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"></iframe>
+                <a href="https://open.spotify.com/album/4etAIuBtrSVVKGINaVURJp?si=SazHUPrGRr-19bQOUHKCPA" target="_blank" class="btn btn-sm">Spotify</a>
+                <a href="https://music.apple.com/at/album/midnight-mysteries/1779081710" target="_blank" class="btn btn-sm">Apple</a>
+            </div>
+
+            <!-- DEAD MYSTERY -->
+            <div class="album-card">
+                <h3>DEAD MYSTERY</h3>
+                <iframe width="100%" height="300" src="https://soundcloud.com/nxxn-prxnce/dead-mystery-b-day-drop?in=scarecrow_maniac/sets/dead-mystery-scarecrow-maniac&si=a4f51361ef4d4ca88913e261185520fc&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"></iframe>
+                <a href="https://open.spotify.com/album/0OuW0r1N0Qzq8nKAhfFA1U?si=BShMu65JQlC8hYCXkzC_kA" target="_blank" class="btn btn-sm">Spotify</a>
+                <a href="https://music.apple.com/at/album/dead-mystery/1845910947" target="_blank" class="btn btn-sm">Apple</a>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 50px;">
+            <a href="https://soundcloud.com/scarecrow_maniac" target="_blank" class="btn">Listen more on SoundCloud</a>
+        </div>
+    </section>
+
+    <footer>
+        <h2 class="section-title" style="border:none; padding:0;">FOR COLLABORATIONS</h2>
+        <p>Business Email: <a href="mailto:rinat.sadykov.2acc@gmail.com" style="color:#fff;">rinat.sadykov.2acc@gmail.com</a></p>
+        <a href="https://t.me/STREET_OF_DA_SCARECROW" target="_blank" class="btn"><i class="fa-brands fa-telegram"></i> Telegram Channel</a>
+    </footer>
+
+</body>
+</html>
